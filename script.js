@@ -513,7 +513,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Nomor WhatsApp tujuan (ganti dengan nomor Anda)
                 const whatsappNumber = ""; // Contoh: Ganti dengan nomor WhatsApp Anda, tanpa '+' atau spasi
 
-                const whatsappUrl = `https://discord.gg/Xc9YfX5F`;
+                const whatsappUrl = `https://discord.gg/QeqfnSSaYD`;
 
                 window.open(whatsappUrl, '_blank');
 
