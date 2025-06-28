@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk Los Zetas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="path/to/your/style.css"> 
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo"><a href="index.html">Los Zetas BM</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="products.html">Produk</a></li>
+                    <li><a href="categories.html">Kategori</a></li>
+                    <li><a href="about.html">Tentang Kami</a></li>
+                    <li><a href="contact.html">Kontak</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <a href="#" aria-label="Cari"><i class="fas fa-search"></i></a>
+                    <a href="#" aria-label="Akun Pengguna"><i class="fas fa-user"></i></a>
+                    <a href="#" aria-label="Keranjang Belanja"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h2>Semua Produk</h2>
+                <p>Temukan Barang Yang Kalian Butuhkan.</p>
+            </div>
+        </section>
+
+        <section class="product-grid" id="product-section">
+            <div class="container">
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; Los Zetas Black Market.</p>
+            
+    </footer>
+
+    <div id="productDetailModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="modal-body">
+                <img id="modalProductImage" src="" alt="Product Image">
+                <h3 id="modalProductName"></h3>
+                <p id="modalProductPrice"></p>
+                <p id="modalProductDescription">Pilih produk yang kalian butuhkan.</p>
+                <button class="btn-primary add-to-cart-modal-btn">Tambah ke Keranjang</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1164 @@
+/* Warna */
+:root {
+    --color-black: #1a1a1a;
+    --color-cream: #f5f5dc;
+    --color-gray: #ccc;
+    --color-light-gray: #eee;
+    --color-text-dark: #333;
+    --color-text-light: #fefefe;
+    --color-accent: #b8860b; /* Contoh warna aksen emas/kuning tua */
+}
+
+/* General Styles */
+body {
+    font-family: 'Open Sans', sans-serif; /* Diubah dari Montserrat */
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-light-gray);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: var(--color-black);
+    color: var(--color-text-light);
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin: 0;
+    font-size: 1.8em;
+    font-weight: 600;
+    color: var(--color-cream);
+}
+
+.logo a {
+    color: inherit;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 25px;
+}
+
+nav ul li a {
+    color: var(--color-cream);
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--color-accent);
+}
+
+.nav-icons {
+    display: flex;
+    gap: 15px;
+    margin-left: 30px;
+}
+
+.nav-icons a {
+    color: var(--color-cream);
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-icons a:hover {
+    color: var(--color-accent);
+}
+
+/* Cart Count Styling */
+.cart-count {
+    background-color: var(--color-accent);
+    color: var(--color-black);
+    font-size: 0.75em;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 50%;
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    min-width: 20px;
+    text-align: center;
+    line-height: 1.2;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    display: none;
+}
+
+/* Hero Section (for index.html) */
+.hero-section {
+    background-color: var(--color-cream);
+    color: var(--color-text-dark);
+    text-align: center;
+    padding: 80px 0;
+    background-image: url('https://via.placeholder.com/1400x500/DDD/555?text=Background+Elegan');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(245, 245, 220, 0.6);
+    z-index: 0;
+}
+
+.hero-section h2, .hero-section p, .hero-section .btn-primary {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section h2 {
+    font-family: 'EB Garamond', serif; /* Diubah dari Playfair Display */
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: var(--color-black);
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: var(--color-black);
+    color: var(--color-cream);
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-accent);
+    color: var(--color-black);
+}
+
+.btn-secondary {
+    background-color: var(--color-cream);
+    color: var(--color-black);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.95em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 1px solid var(--color-black);
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-black);
+    color: var(--color-cream);
+}
+
+/* Styling untuk Hero Section di Halaman Selain Beranda */
+.page-hero {
+    background-color: var(--color-cream);
+    color: var(--color-text-dark);
+    text-align: center;
+    padding: 60px 0;
+    background-image: url('https://via.placeholder.com/1400x300/DDD/555?text=Header+Halaman');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.page-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(245, 245, 220, 0.7);
+    z-index: 0;
+}
+
+.page-hero h2, .page-hero p {
+    position: relative;
+    z-index: 1;
+    color: var(--color-black);
+}
+
+.page-hero h2 {
+    font-family: 'EB Garamond', serif; /* Diubah dari Playfair Display */
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.page-hero p {
+    font-size: 1.1em;
+    margin-bottom: 0;
+}
+
+/* Product Grid */
+.product-grid {
+    padding: 50px 0;
+    background-color: var(--color-light-gray);
+}
+
+.product-grid h3 {
+    text-align: center;
+    font-size: 2.2em;
+    margin-bottom: 40px;
+    color: var(--color-black);
+}
+
+.product-grid .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid var(--color-gray);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid var(--color-gray);
+}
+
+.product-card h4 {
+    font-size: 1.3em;
+    margin: 20px 10px 10px 10px;
+    color: var(--color-black);
+}
+
+.product-card .price {
+    font-size: 1.1em;
+    color: var(--color-accent);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+
+/* Advantages Section */
+.advantages-section {
+    padding: 60px 0;
+    background-color: var(--color-cream);
+    text-align: center;
+    color: var(--color-text-dark);
+}
+
+.advantages-section h3 {
+    font-size: 2.2em;
+    margin-bottom: 40px;
+    color: var(--color-black);
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.advantage-item {
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.advantage-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.advantage-item .icon-large {
+    font-size: 3em;
+    color: var(--color-accent);
+    margin-bottom: 15px;
+}
+
+.advantage-item h4 {
+    font-size: 1.5em;
+    color: var(--color-black);
+    margin-bottom: 10px;
+}
+
+.advantage-item p {
+    font-size: 0.95em;
+    color: #555;
+}
+
+/* Categories Section */
+.categories-section {
+    padding: 60px 0;
+    background-color: var(--color-light-gray);
+    text-align: center;
+}
+
+.categories-section h3 {
+    font-size: 2.2em;
+    margin-bottom: 40px;
+    color: var(--color-black);
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+    justify-content: center;
+}
+
+.category-item {
+    display: block;
+    background-color: #fff;
+    border: 1px solid var(--color-gray);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-text-dark);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.category-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    background-color: var(--color-cream);
+}
+
+.category-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    border: 2px solid var(--color-accent);
+}
+
+.category-item h4 {
+    font-size: 1.2em;
+    color: var(--color-black);
+}
+
+/* About Us Section */
+.about-us {
+    background-color: var(--color-black);
+    color: var(--color-cream);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.about-us h3 {
+    font-family: 'EB Garamond', serif; /* Diubah dari Playfair Display */
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+.about-us p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Contact Section */
+.contact-section {
+    padding: 60px 0;
+    background-color: var(--color-cream);
+    color: var(--color-text-dark);
+}
+
+.contact-section h3 {
+    text-align: center;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: var(--color-black);
+}
+
+.contact-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.contact-form, .contact-info {
+    flex: 1;
+    min-width: 300px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.contact-form h4, .contact-info h4 {
+    font-size: 1.8em;
+    color: var(--color-black);
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--color-black);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid var(--color-gray);
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif; /* Diubah dari Montserrat */
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    border-color: var(--color-accent);
+    outline: none;
+    box-shadow: 0 0 5px rgba(184, 134, 11, 0.3);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.contact-info p {
+    font-size: 1.05em;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info p i {
+    margin-right: 10px;
+    color: var(--color-accent);
+    font-size: 1.2em;
+}
+
+.contact-info a {
+    color: var(--color-text-dark);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: var(--color-accent);
+}
+
+.map-container {
+    margin-top: 25px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.map-container iframe {
+    display: block;
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-black);
+    color: var(--color-cream);
+    text-align: center;
+    padding: 25px 0;
+    border-top: 1px solid var(--color-accent);
+}
+
+footer .social-links a {
+    color: var(--color-cream);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+    color: var(--color-accent);
+}
+
+/* Modal Styles (for Product Detail) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-body img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.modal-body h3 {
+    font-size: 1.8em;
+    color: var(--color-black);
+    margin-bottom: 10px;
+}
+
+.modal-body p {
+    font-size: 1.1em;
+    color: var(--color-text-dark);
+    margin-bottom: 15px;
+}
+
+.modal-body #modalProductDescription {
+    font-size: 0.95em;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: var(--color-black);
+    text-decoration: none;
+}
+
+.add-to-cart-modal-btn {
+    margin-top: 20px;
+}
+
+/* --- New Styles for Search Overlay --- */
+.search-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1001; /* Higher than other modals */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9); /* Darker overlay */
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px); /* Add blur effect */
+}
+
+.search-content {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    animation: slideDownFadeIn 0.4s ease-out;
+}
+
+.search-content input[type="text"] {
+    width: calc(100% - 40px);
+    padding: 15px 20px;
+    border: 2px solid var(--color-accent);
+    border-radius: 50px; /* Rounded search bar */
+    font-size: 1.2em;
+    outline: none;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.search-content input[type="text"]:focus {
+    box-shadow: 0 0 15px rgba(184, 134, 11, 0.5);
+}
+
+.search-results {
+    max-height: 300px;
+    overflow-y: auto;
+    text-align: left;
+    border-top: 1px solid var(--color-light-gray);
+    padding-top: 15px;
+}
+
+.search-results .result-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-results .result-item:last-child {
+    border-bottom: none;
+}
+
+.search-results .result-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.search-results .result-item a {
+    color: var(--color-black);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1em;
+    transition: color 0.2s ease;
+}
+
+.search-results .result-item a:hover {
+    color: var(--color-accent);
+    text-decoration: underline;
+}
+
+.search-results .result-item p { /* Price in search results */
+    font-size: 0.9em;
+    color: #888;
+    margin: 0;
+    margin-left: auto; /* Push price to the right */
+    white-space: nowrap; /* Prevent line break */
+}
+
+.search-overlay .close-button {
+    color: #555;
+    top: 20px;
+    right: 25px;
+}
+.search-overlay .close-button:hover {
+    color: var(--color-black);
+}
+
+/* --- New Styles for Cart Modal --- */
+.cart-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1002; /* Higher than search overlay */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-modal-content {
+    background-color: #fefefe;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+    animation: fadeInScale 0.3s ease-out;
+}
+
+.cart-modal-content h3 {
+    font-family: 'EB Garamond', serif; /* Diubah dari Playfair Display */
+    font-size: 2em;
+    color: var(--color-black);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+#cart-items-container {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding-right: 10px; /* For scrollbar */
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--color-light-gray);
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+}
+
+.cart-item-details h4 {
+    margin: 0;
+    font-size: 1.2em;
+    color: var(--color-black);
+}
+
+.cart-item-details p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #666;
+}
+
+.cart-item-price {
+    font-weight: 600;
+    color: var(--color-accent);
+}
+
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap; /* Prevent line break */
+}
+
+.cart-item-quantity button {
+    background-color: var(--color-black);
+    color: var(--color-cream);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s ease;
+}
+
+.cart-item-quantity button:hover {
+    background-color: var(--color-accent);
+    color: var(--color-black);
+}
+
+.cart-item-quantity span {
+    font-weight: 500;
+    font-size: 1.1em;
+    min-width: 25px; /* Ensure space for quantity numbers */
+    text-align: center;
+}
+
+.remove-item-btn {
+    background-color: #dc3545; /* Red color */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s ease;
+    margin-left: 10px; /* Space from quantity buttons */
+}
+
+.remove-item-btn:hover {
+    background-color: #c82333;
+}
+
+.cart-summary {
+    text-align: right;
+    border-top: 2px solid var(--color-gray);
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.cart-summary p {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+    color: var(--color-black);
+}
+
+.cart-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.cart-modal .close-button {
+    color: #aaa;
+    top: 15px;
+    right: 25px;
+}
+.cart-modal .close-button:hover {
+    color: var(--color-black);
+}
+
+/* Animasi */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDownFadeIn {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+
+/* Responsive Design */
+/* Untuk tablet dan mobile besar */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px; /* Sedikit lebih kecil untuk ruang bernapas */
+    }
+
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 1.6em; /* Sedikit lebih kecil */
+        margin-bottom: 10px;
+    }
+
+    nav {
+        margin-top: 15px;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    nav ul {
+        flex-direction: column;
+        margin-bottom: 15px;
+        width: 100%;
+        border-top: 1px solid rgba(255,255,255,0.1); /* Garis pemisah */
+        padding-top: 10px;
+    }
+    nav ul li {
+        margin: 5px 0;
+        width: 100%;
+    }
+    nav ul li a {
+        padding: 8px 0;
+        display: block;
+        background-color: var(--color-black); /* Agar tombol navigasi lebih jelas */
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    nav ul li:last-child a {
+        border-bottom: none;
+    }
+    .nav-icons {
+        margin-left: 0;
+        justify-content: center;
+        width: 100%;
+        padding-top: 10px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .hero-section {
+        padding: 60px 0; /* Padding lebih kecil */
+    }
+    .hero-section h2 {
+        font-size: 2.2em;
+    }
+    .hero-section p {
+        font-size: 1em;
+    }
+    .btn-primary {
+        font-size: 1em;
+        padding: 10px 25px;
+    }
+
+    .page-hero {
+        padding: 40px 0;
+    }
+    .page-hero h2 {
+        font-size: 2em;
+    }
+    .page-hero p {
+        font-size: 0.95em;
+    }
+
+    .product-grid .container,
+    .advantages-grid,
+    .categories-grid {
+        grid-template-columns: 1fr; /* Satu kolom untuk tampilan yang lebih baik */
+    }
+
+    .product-card img {
+        height: 220px; /* Sedikit lebih tinggi agar gambar terlihat lebih jelas */
+    }
+
+    .product-card h4 {
+        font-size: 1.2em;
+    }
+
+    .advantage-item {
+        padding: 25px 15px;
+    }
+    .advantage-item .icon-large {
+        font-size: 2.5em;
+    }
+    .advantage-item h4 {
+        font-size: 1.3em;
+    }
+
+    .category-item img {
+        width: 80px;
+        height: 80px;
+    }
+    .category-item h4 {
+        font-size: 1.1em;
+    }
+
+    .about-us h3,
+    .contact-section h3 {
+        font-size: 2em;
+    }
+    .about-us p,
+    .contact-intro {
+        font-size: 1em;
+        padding: 0 10px; /* Menambah padding horizontal */
+    }
+
+    .contact-content {
+        flex-direction: column;
+        gap: 25px;
+    }
+    .contact-form, .contact-info {
+        min-width: unset;
+        width: 100%;
+        padding: 25px;
+    }
+
+    /* Modal Adjustments */
+    .modal-content, .search-content, .cart-modal-content {
+        width: 90%;
+        padding: 20px;
+        box-sizing: border-box; /* Pastikan padding dihitung dalam lebar */
+    }
+    .close-button {
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+    }
+    .modal-body h3 {
+        font-size: 1.5em;
+    }
+    .modal-body p {
+        font-size: 1em;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        gap: 10px; /* Kurangi jarak antar item */
+    }
+    .cart-item img {
+        width: 70px;
+        height: 70px;
+    }
+    .cart-item-details {
+        margin-bottom: 5px;
+        width: 100%; /* Agar detail mengisi lebar */
+    }
+    .cart-item-details h4 {
+        font-size: 1.1em;
+    }
+    .cart-item-details p {
+        font-size: 0.9em;
+    }
+    .cart-item-quantity {
+        margin-top: 0;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    .remove-item-btn {
+        margin-top: 0;
+        width: 100%; /* Jadikan tombol hapus selebar mungkin */
+        margin-left: 0;
+        padding: 10px; /* Lebih mudah disentuh */
+    }
+    .cart-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .cart-actions .btn-primary,
+    .cart-actions .btn-secondary {
+        width: 100%;
+    }
+
+    footer p {
+        font-size: 0.9em;
+    }
+}
+
+/* Untuk mobile sangat kecil (di bawah 480px) */
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 40px 0;
+    }
+    .hero-section h2 {
+        font-size: 1.8em;
+    }
+    .hero-section p {
+        font-size: 0.9em;
+    }
+    .btn-primary {
+        font-size: 0.9em;
+        padding: 8px 20px;
+    }
+
+    .product-grid h3,
+    .advantages-section h3,
+    .categories-section h3,
+    .about-us h3,
+    .contact-section h3 {
+        font-size: 1.8em;
+    }
+
+    .product-card {
+        margin: 0 auto; /* Tengah kartu produk jika hanya ada satu kolom */
+        max-width: 300px; /* Batasi lebar agar tidak terlalu lebar di layar sempit */
+    }
+
+    .modal-content, .search-content, .cart-modal-content {
+        padding: 15px;
+    }
+    .modal-body img {
+        height: 180px; /* Sesuaikan tinggi gambar modal */
+    }
+    .modal-body h3 {
+        font-size: 1.3em;
+    }
+    .modal-body p {
+        font-size: 0.9em;
+    }
+
+    .search-content input[type="text"] {
+        padding: 10px 15px;
+        font-size: 1em;
+    }
+
+    .search-results .result-item img {
+        width: 40px;
+        height: 40px;
+    }
+    .search-results .result-item a {
+        font-size: 0.95em;
+    }
+    .search-results .result-item p {
+        font-size: 0.8em;
+    }
+
+    .cart-modal-content h3 {
+        font-size: 1.6em;
+    }
+    .cart-item img {
+        width: 50px;
+        height: 50px;
+    }
+    .cart-item-details h4 {
+        font-size: 1em;
+    }
+    .remove-item-btn {
+        padding: 8px; /* Lebih ramping */
+        font-size: 0.8em;
+    }
+    .cart-summary p {
+        font-size: 1.1em;
+    }
+}
