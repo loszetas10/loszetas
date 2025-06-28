@@ -511,9 +511,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 const encodedMessage = encodeURIComponent(whatsappMessage);
 
                 // Nomor WhatsApp tujuan (ganti dengan nomor Anda)
-                const whatsappNumber = "6282312345678"; // Contoh: Ganti dengan nomor WhatsApp Anda, tanpa '+' atau spasi
+                const whatsappNumber = ""; // Contoh: Ganti dengan nomor WhatsApp Anda, tanpa '+' atau spasi
 
-                const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+                const whatsappUrl = `https://discord.gg/Xc9YfX5F`;
 
                 window.open(whatsappUrl, '_blank');
 
